@@ -12,14 +12,13 @@ class StatsCalulator {
   late List<CountriesStatsModel> countriesStatsList = [];
   Future<WorldStatsModel> fetchworldStats() async {
     final response = await http
-        .get(Uri.parse(App_url.baseUrl + "/" + App_url.worldStatesApi));
+        .get(Uri.parse("${App_url.baseUrl}/${App_url.worldStatesApi}"));
     final data = jsonDecode(response.body.toString());
     if (response.statusCode == 200) {
       worldstats = WorldStatsModel.fromJson(data);
       print(worldstats.cases);
       print(worldstats.recovered);
       print(worldstats.deaths);
-
       return worldstats;
     } else {
       print("some error occured fetching the APi");
@@ -36,14 +35,12 @@ class StatsCalulator {
         print(element);
         countriesStatsList.add(CountriesStatsModel.fromJson(element));
       }
-      // print(countriesStatsList);
-
       // return data;
       return countriesStatsList;
     } else {
       // return data;
-      return countriesStatsList;
       print("some error occured fetching the APi");
+      return countriesStatsList;
       // return countriesStatsList;
     }
   }

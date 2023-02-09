@@ -10,7 +10,7 @@ import 'package:pie_chart/pie_chart.dart';
 import 'package:http/http.dart' as http;
 
 class WorldStatsScreen extends StatefulWidget {
-  WorldStatsScreen({Key? key}) : super(key: key);
+  const WorldStatsScreen({Key? key}) : super(key: key);
 
   @override
   State<WorldStatsScreen> createState() => _WorldStatsScreenState();
@@ -18,8 +18,8 @@ class WorldStatsScreen extends StatefulWidget {
 
 class _WorldStatsScreenState extends State<WorldStatsScreen>
     with TickerProviderStateMixin {
-  late AnimationController _controller =
-      AnimationController(vsync: this, duration: Duration(seconds: 1));
+  late final AnimationController _controller =
+      AnimationController(vsync: this, duration: const Duration(seconds: 1));
 
   final colorList = <Color>[
     const Color(0xff4285F4),
@@ -28,7 +28,7 @@ class _WorldStatsScreenState extends State<WorldStatsScreen>
   ]; //<Color>[]
   @override
   Widget build(BuildContext context) {
-    StatsCalulator stats = new StatsCalulator();
+    StatsCalulator stats = StatsCalulator();
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -59,8 +59,8 @@ class _WorldStatsScreenState extends State<WorldStatsScreen>
                       'Death': snapshot.data!.deaths!.toDouble(),
                       'Recovered': snapshot.data!.recovered!.toDouble(),
                     },
-                    chartValuesOptions:
-                        ChartValuesOptions(showChartValuesInPercentage: true),
+                    chartValuesOptions: const ChartValuesOptions(
+                        showChartValuesInPercentage: true),
                     chartType: ChartType.ring,
                     legendOptions: const LegendOptions(
                         legendPosition: LegendPosition.left),
