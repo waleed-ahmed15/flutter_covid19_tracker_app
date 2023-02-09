@@ -13,4 +13,9 @@ A simple Covid Tracker is an app made with Flutter framework to provide worldwid
 
 ## :camera: Screenshots
 
-![image search api](https://github.com/waleed-ahmed15/flutter_covid19_tracker_app/blob/master/screenshots/spalsh%20screen.png)
+<div align="center"><kbd><img alt="App Tour" src="screenshots/splash_screen.png" width="260" height="538" style="border-style: solid; border-color: #FFFFFF; border-width:1px;"/></kbd></div>
+<br></br>
+<div align="center">
+<img src="screenshots/world_stats.png" width="260" height="538"/>&nbsp;<img src="Readme_files/global_screen.png" width="260" height="538"/>&nbsp;&nbsp;<img src="screenshots/country_stats.png" width="260" height="538"/><br></br>
+<img src="screenshots/countries.png" width="260" height="538"/><img src="Readme_files/country_screen.png" width="260" height="538"/>&nbsp;<img src="screenshots/country_stats.png" width="260" height="538"/><br></br>
+</div>
